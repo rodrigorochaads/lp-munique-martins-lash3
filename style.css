@@ -1,16 +1,12 @@
-/* ============================================
-   PALETA IDENTIDADE VISUAL - MUNIQUE MARTINS
-   Branco · Bege · Marrom Chocolate · Preto
-   ============================================ */
 :root {
-  --choco:        #5C3317;   /* marrom chocolate principal */
-  --choco-hover:  #3E2010;   /* chocolate escuro hover     */
-  --choco-light:  #8B5E3C;   /* chocolate médio            */
-  --beige:        #F5EFE6;   /* bege claro fundo           */
-  --beige-dark:   #DDD0BE;   /* bege escuro detalhes       */
-  --beige-mid:    #EDE3D5;   /* bege intermediário         */
-  --black:        #1a1a1a;   /* preto texto                */
-  --gray:         #6B5E52;   /* cinza quente texto suave   */
+  --choco:        #5C3317;
+  --choco-hover:  #3E2010;
+  --choco-light:  #8B5E3C;
+  --beige:        #F5EFE6;
+  --beige-dark:   #DDD0BE;
+  --beige-mid:    #EDE3D5;
+  --black:        #1a1a1a;
+  --gray:         #6B5E52;
   --white:        #ffffff;
   --shadow-choco: 0 10px 40px rgba(92,51,23,0.15);
   --shadow-soft:  0 8px 30px rgba(0,0,0,0.07);
@@ -28,14 +24,13 @@ h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; line-heigh
 h1 { font-size: clamp(2rem, 5vw, 3.2rem); color: var(--black); }
 h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); color: var(--black); text-align: center; margin-bottom: 0.8rem; }
 h3 { font-size: 1.1rem; margin-bottom: 0.4rem; color: var(--black); }
-
 .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 section { padding: 5rem 0; }
 .section-sub { text-align: center; max-width: 620px; margin: 0 auto 2.5rem; font-size: 1.05rem; }
 .bg-bege { background: var(--beige); }
 .bg-pink-pale { background: var(--beige-mid); }
 
-/* === BADGE === */
+/* BADGE */
 .badge {
   display: inline-block;
   background: linear-gradient(135deg, var(--choco), var(--choco-hover));
@@ -49,7 +44,7 @@ section { padding: 5rem 0; }
   letter-spacing: 0.3px;
 }
 
-/* === BUTTONS === */
+/* BUTTONS */
 .btn-primary {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -80,12 +75,11 @@ section { padding: 5rem 0; }
 }
 .btn-white:hover { transform: translateY(-3px); background: var(--beige); }
 
-/* === FLOATING WHATSAPP === */
+/* FLOATING WHATSAPP */
 .float-wa {
   position: fixed; bottom: 24px; right: 24px;
   width: 58px; height: 58px;
-  background: #25D366;
-  border-radius: 50%;
+  background: #25D366; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   color: white; z-index: 1000;
   box-shadow: 0 6px 22px rgba(37,211,102,0.45);
@@ -94,7 +88,7 @@ section { padding: 5rem 0; }
 .float-wa:hover { transform: scale(1.12); }
 .float-wa svg { width: 30px; height: 30px; fill: white; }
 
-/* === HERO === */
+/* HERO */
 #hero {
   background: linear-gradient(135deg, var(--beige) 0%, var(--white) 55%, var(--beige-mid) 100%);
   padding: 5rem 0 4rem;
@@ -110,7 +104,6 @@ section { padding: 5rem 0; }
 }
 .hero-bullets li span { flex-shrink: 0; }
 .hero-note { margin-top: 1rem; font-size: 0.88rem; color: var(--gray); font-style: italic; }
-
 .foto-placeholder {
   background: linear-gradient(135deg, var(--beige-mid), var(--beige-dark));
   border-radius: var(--radius);
@@ -125,13 +118,11 @@ section { padding: 5rem 0; }
 .foto-placeholder p { font-weight: 600; color: var(--choco); }
 .foto-placeholder small { font-size: 0.78rem; color: var(--gray); }
 
-/* === PARA QUEM === */
+/* PARA QUEM */
 .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
 .card-pq {
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 2rem 1.5rem;
-  text-align: center;
+  background: var(--white); border-radius: var(--radius);
+  padding: 2rem 1.5rem; text-align: center;
   box-shadow: var(--shadow-soft);
   transition: transform 0.3s, box-shadow 0.3s;
   border-top: 4px solid var(--choco);
@@ -140,36 +131,30 @@ section { padding: 5rem 0; }
 .card-pq span { font-size: 2.5rem; display: block; margin-bottom: 0.8rem; }
 .card-pq p { font-size: 0.95rem; }
 
-/* === MÓDULOS === */
+/* MÓDULOS */
 .modulos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr)); gap: 1.2rem; margin-top: 2rem; }
 .modulo-card {
-  background: var(--white);
-  border-radius: var(--radius-sm);
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: var(--shadow-soft);
-  transition: all 0.3s;
+  background: var(--white); border-radius: var(--radius-sm);
+  padding: 1.5rem; text-align: center;
+  box-shadow: var(--shadow-soft); transition: all 0.3s;
   display: flex; flex-direction: column; align-items: center; gap: 0.8rem;
 }
 .modulo-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-choco); }
 .modulo-card > span {
   width: 42px; height: 42px;
   background: linear-gradient(135deg, var(--choco), var(--choco-hover));
-  color: white;
-  border-radius: 50%;
+  color: white; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1rem;
   flex-shrink: 0;
 }
 .modulo-card p { font-size: 0.9rem; }
 
-/* === DIFERENCIAIS === */
+/* DIFERENCIAIS */
 .dif-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
 .dif-item {
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 2rem 1.5rem;
-  text-align: center;
+  background: var(--white); border-radius: var(--radius);
+  padding: 2rem 1.5rem; text-align: center;
   box-shadow: var(--shadow-soft);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -177,16 +162,14 @@ section { padding: 5rem 0; }
 .dif-item > span { font-size: 2.5rem; display: block; margin-bottom: 1rem; }
 .dif-item p { font-size: 0.9rem; }
 
-/* === INCLUSO === */
+/* INCLUSO */
 .incluso-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem; margin-top: 2.5rem;
   max-width: 920px; margin-left: auto; margin-right: auto;
 }
 .incluso-item {
-  background: var(--white);
-  border-radius: var(--radius-sm);
+  background: var(--white); border-radius: var(--radius-sm);
   padding: 1.2rem 1.5rem;
   font-size: 0.98rem; color: var(--black); font-weight: 500;
   box-shadow: var(--shadow-soft);
@@ -195,18 +178,15 @@ section { padding: 5rem 0; }
 }
 .incluso-item:hover { transform: translateX(4px); }
 
-/* === DEPOIMENTOS === */
+/* DEPOIMENTOS */
 .dep-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
 .dep-card {
   background: linear-gradient(135deg, var(--beige-mid), var(--beige));
-  border-radius: var(--radius);
-  padding: 2rem;
-  box-shadow: var(--shadow-soft);
-  position: relative; overflow: hidden;
+  border-radius: var(--radius); padding: 2rem;
+  box-shadow: var(--shadow-soft); position: relative; overflow: hidden;
 }
 .dep-card::before {
-  content: '"';
-  font-family: 'Montserrat', sans-serif;
+  content: '"'; font-family: 'Montserrat', sans-serif;
   font-size: 6rem; color: var(--choco);
   position: absolute; top: -10px; left: 12px;
   line-height: 1; opacity: 0.15;
@@ -222,7 +202,7 @@ section { padding: 5rem 0; }
 .dep-placeholder p { font-size: 0.9rem; font-style: normal; color: var(--gray); }
 .dep-placeholder::before { display: none; }
 
-/* === SOBRE === */
+/* SOBRE */
 .sobre-inner { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 3.5rem; align-items: center; }
 .sobre-text h2 { text-align: left; margin-bottom: 1rem; }
 .sobre-text p { margin-bottom: 1.5rem; }
@@ -230,10 +210,9 @@ section { padding: 5rem 0; }
 .sobre-bullets li { padding: 0.5rem 0; font-size: 0.95rem; color: var(--black); }
 .sobre-img .foto-placeholder { min-height: 360px; }
 
-/* === PREÇO === */
+/* PREÇO */
 .preco-card {
-  background: var(--white);
-  border-radius: var(--radius);
+  background: var(--white); border-radius: var(--radius);
   box-shadow: 0 20px 60px rgba(0,0,0,0.1);
   display: grid; grid-template-columns: 1.2fr 1fr;
   overflow: hidden; margin-top: 2.5rem;
@@ -245,4 +224,17 @@ section { padding: 5rem 0; }
 .preco-item p { font-size: 0.9rem; margin: 0; }
 .preco-item small { font-size: 0.8rem; color: var(--gray); }
 .preco-valor {
-  background: linear-gradient(150deg, var(--choco)
+  background: linear-gradient(150deg, var(--choco) 0%, var(--choco-hover) 100%);
+  padding: 2.5rem 2rem;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; gap: 1rem;
+}
+.preco-label { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
+.preco-num { font-family: 'Montserrat', sans-serif; font-size: 2.8rem; font-weight: 900; color: white; line-height: 1; }
+.preco-parcel { color: rgba(255,255,255,0.8); font-size: 0.85rem; }
+.urgencia-note { font-size: 0.82rem; color: rgba(255,255,255,0.82); font-style: italic; padding: 0 0.5rem; }
+
+/* GARANTIA */
+.garantia-inner {
+  display: flex; gap: 2
