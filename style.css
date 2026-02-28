@@ -200,7 +200,7 @@ section { padding: 5rem 0; }
 .sobre-text p { margin-bottom: 1.5rem; }
 .sobre-bullets { list-style: none; }
 .sobre-bullets li { padding: 0.5rem 0; font-size: 0.95rem; color: var(--black); }
-/* Ajuste para cortar a foto da Munique (Blazer Cinza) */
+/* Ajuste padrão (desktop) */
 .sobre-img-container img { object-fit: cover; object-position: top; }
 
 /* PREÇO */
@@ -259,8 +259,8 @@ section { padding: 5rem 0; }
   /* 1. AJUSTE DO TOPO (HERO) */
   .hero-inner {
     display: flex;
-    flex-direction: column; /* Empilha o texto e a foto */
-    text-align: center; /* Centraliza o texto */
+    flex-direction: column; 
+    text-align: center;
   }
   
   .hero-text {
@@ -268,7 +268,7 @@ section { padding: 5rem 0; }
   }
   
   .hero-bullets {
-    display: inline-block; /* Mantém os checks alinhados à esquerda, mas no centro da tela */
+    display: inline-block;
     text-align: left;
     margin: 20px auto;
   }
@@ -281,19 +281,19 @@ section { padding: 5rem 0; }
   }
   
   .hero-img img {
-    max-width: 350px; /* Evita que a foto fique gigante no celular */
+    max-width: 350px;
     margin: 0 auto;
   }
 
   /* 2. AJUSTE DA SEÇÃO DE PREÇO E TURMAS */
   .preco-card {
     display: flex;
-    flex-direction: column; /* Coloca as informações em cima e o preço embaixo */
+    flex-direction: column;
   }
   
   .preco-info {
     border-right: none; 
-    border-bottom: 2px dashed #ddd; /* Coloca uma linha divisória embaixo */
+    border-bottom: 2px dashed #ddd;
     padding-bottom: 30px;
     margin-bottom: 0;
   }
@@ -306,7 +306,7 @@ section { padding: 5rem 0; }
   /* 3. AJUSTE DA GARANTIA */
   .garantia-inner {
     display: flex;
-    flex-direction: column; /* Empilha o escudo e o texto */
+    flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 2rem 1.5rem;
@@ -336,5 +336,22 @@ section { padding: 5rem 0; }
   .sobre-img-container {
     margin-bottom: 40px;
     width: 100%;
+  }
+
+  /* 5. CORREÇÃO ESPECÍFICA DO CORTE DA IMAGEM NO MOBILE */
+  .sobre-img-container img {
+    /* "Sobe" a imagem para revelar o certificado e as mãos cortadas no mobile */
+    object-position: center 10%; 
+  }
+
+  /* 6. FAQ SEMPRE ABERTO NO MOBILE */
+  .faq-ans {
+    max-height: 1000px; /* Força a abertura da resposta cancelando o 0 original */
+    padding-top: 0.5rem; 
+  }
+  
+  .faq-btn {
+    color: var(--choco); /* Destaca a pergunta para não embolar com o texto da resposta */
+    padding-bottom: 0.5rem;
   }
 }
