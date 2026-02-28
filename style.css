@@ -15,6 +15,13 @@
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* TRAVA PARA IMPEDIR A BARRA DE ROLAGEM HORIZONTAL NA PÁGINA TODA */
+html, body { 
+  overflow-x: hidden; 
+  width: 100%; 
+}
+
 html { scroll-behavior: smooth; }
 body { font-family: 'Roboto', sans-serif; color: var(--black); line-height: 1.7; background: var(--white); }
 img { max-width: 100%; display: block; border-radius: var(--radius); }
@@ -104,19 +111,6 @@ section { padding: 5rem 0; }
 }
 .hero-bullets li span { flex-shrink: 0; }
 .hero-note { margin-top: 1rem; font-size: 0.88rem; color: var(--gray); font-style: italic; }
-.foto-placeholder {
-  background: linear-gradient(135deg, var(--beige-mid), var(--beige-dark));
-  border-radius: var(--radius);
-  min-height: 400px;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  text-align: center; gap: 0.6rem;
-  box-shadow: var(--shadow-choco);
-  border: 2px dashed var(--beige-dark);
-}
-.foto-placeholder span { font-size: 3.5rem; }
-.foto-placeholder p { font-weight: 600; color: var(--choco); }
-.foto-placeholder small { font-size: 0.78rem; color: var(--gray); }
 
 /* PARA QUEM */
 .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
@@ -200,7 +194,6 @@ section { padding: 5rem 0; }
 .sobre-text p { margin-bottom: 1.5rem; }
 .sobre-bullets { list-style: none; }
 .sobre-bullets li { padding: 0.5rem 0; font-size: 0.95rem; color: var(--black); }
-/* Ajuste padrão (desktop) */
 .sobre-img-container img { object-fit: cover; object-position: top; }
 
 /* PREÇO */
@@ -228,7 +221,7 @@ section { padding: 5rem 0; }
 .preco-parcel { color: rgba(255,255,255,0.8); font-size: 0.85rem; }
 .urgencia-note { font-size: 0.82rem; color: rgba(255,255,255,0.82); font-style: italic; padding: 0 0.5rem; }
 
-/* GARANTIA (Completo) */
+/* GARANTIA */
 .garantia-inner {
   display: flex; gap: 2rem; align-items: center;
   background: var(--white);
@@ -237,7 +230,7 @@ section { padding: 5rem 0; }
 }
 .garantia-badge { font-size: 3.5rem; flex-shrink: 0; }
 
-/* FAQ E DÚVIDAS FREQUENTES (Completo) */
+/* FAQ */
 .faq-list { display: flex; flex-direction: column; gap: 1rem; max-width: 800px; margin: 2.5rem auto 0; }
 .faq-item { background: var(--white); border-radius: var(--radius-sm); box-shadow: var(--shadow-soft); overflow: hidden; }
 .faq-btn {
@@ -248,7 +241,6 @@ section { padding: 5rem 0; }
 }
 .faq-ans { padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
 .faq-ans p { padding-bottom: 1.2rem; }
-.faq-item.active .faq-ans { max-height: 500px; }
 
 
 /* =========================================
@@ -256,15 +248,29 @@ section { padding: 5rem 0; }
    ========================================= */
 @media (max-width: 768px) {
   
-  /* 1. AJUSTE DO TOPO (HERO) */
+  /* 1. AJUSTE DO TOPO (HERO) - FORÇANDO A CENTRALIZAÇÃO */
   .hero-inner {
-    display: flex;
-    flex-direction: column; 
-    text-align: center;
+    display: flex !important;
+    flex-direction: column !important; 
+    align-items: center !important;
   }
   
   .hero-text {
     padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-text h1, .hero-text .sub, .hero-note {
+    text-align: center !important;
+  }
+
+  /* Centralizando a Badge no mobile */
+  .badge {
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .hero-bullets {
@@ -303,12 +309,12 @@ section { padding: 5rem 0; }
     padding-top: 30px;
   }
 
-  /* 3. AJUSTE DA GARANTIA */
+  /* 3. AJUSTE DA GARANTIA - FORÇANDO CENTRALIZAÇÃO */
   .garantia-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
     padding: 2rem 1.5rem;
   }
   
@@ -317,7 +323,7 @@ section { padding: 5rem 0; }
     margin-bottom: 15px; 
   }
   
-  /* 4. AJUSTE BÔNUS: Centralizar a seção Sobre (Educadora) no celular */
+  /* 4. AJUSTE SOBRE (Educadora) */
   .sobre-inner {
     display: flex;
     flex-direction: column;
@@ -338,21 +344,18 @@ section { padding: 5rem 0; }
     width: 100%;
   }
 
-  /* 5. CORREÇÃO ESPECÍFICA DO CORTE DA IMAGEM NO MOBILE */
   .sobre-img-container img {
-    /* "Sobe" a imagem para revelar o certificado e as mãos cortadas no mobile */
-    /* AJUSTADO PARA 25% CONFORME SOLICITAÇÃO */
     object-position: center 25%; 
   }
 
-  /* 6. FAQ SEMPRE ABERTO NO MOBILE */
+  /* 5. FAQ SEMPRE ABERTO NO MOBILE */
   .faq-ans {
-    max-height: 1000px; /* Força a abertura da resposta cancelando o 0 original */
+    max-height: 1000px; 
     padding-top: 0.5rem; 
   }
   
   .faq-btn {
-    color: var(--choco); /* Destaca a pergunta para não embolar com o texto da resposta */
+    color: var(--choco); 
     padding-bottom: 0.5rem;
   }
 }
