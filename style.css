@@ -248,7 +248,7 @@ section { padding: 5rem 0; }
    ========================================= */
 @media (max-width: 768px) {
   
-  /* 1. AJUSTE DO TOPO (HERO) - FORÇANDO A CENTRALIZAÇÃO ABSOLUTA */
+  /* 1. AJUSTE DO TOPO (HERO) */
   #hero .hero-inner {
     display: flex !important;
     flex-direction: column !important; 
@@ -268,13 +268,11 @@ section { padding: 5rem 0; }
     text-align: center !important;
   }
 
-  /* Centralizando a Badge no mobile */
   #hero .badge {
     margin-left: auto !important;
     margin-right: auto !important;
   }
   
-  /* Mágica para centralizar a lista com os checks alinhados */
   #hero .hero-bullets {
     margin: 20px auto !important;
     width: fit-content !important;
@@ -295,25 +293,32 @@ section { padding: 5rem 0; }
     margin: 0 auto !important;
   }
 
-  /* 2. AJUSTE DA SEÇÃO DE PREÇO E TURMAS */
+  /* 2. AJUSTE DA SEÇÃO DE PREÇO E TURMAS (A CORREÇÃO ESTÁ AQUI!) */
   .preco-card {
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
   }
   
   .preco-info {
-    border-right: none; 
-    border-bottom: 2px dashed #ddd;
-    padding-bottom: 30px;
-    margin-bottom: 0;
+    border-right: none !important; 
+    border-bottom: 2px dashed #ddd !important;
+    padding: 2rem 1.5rem !important;
   }
   
   .preco-valor {
-    padding-left: 0;
-    padding-top: 30px;
+    /* RESETAMOS O PADDING IGUAL PARA OS DOIS LADOS */
+    padding: 2.5rem 1.5rem !important; 
+    width: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
   }
 
-  /* 3. AJUSTE DA GARANTIA - FORÇANDO CENTRALIZAÇÃO */
+  /* 3. AJUSTE DA GARANTIA */
   .garantia-inner {
     display: flex !important;
     flex-direction: column !important;
