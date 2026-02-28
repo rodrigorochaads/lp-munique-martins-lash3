@@ -341,8 +341,8 @@ section { padding: 5rem 0; }
   /* 5. CORREÇÃO ESPECÍFICA DO CORTE DA IMAGEM NO MOBILE */
   .sobre-img-container img {
     /* "Sobe" a imagem para revelar o certificado e as mãos cortadas no mobile */
-    /* AJUSTADO DE 10% PARA 20% CONFORME SOLICITAÇÃO */
-    object-position: center 20%; 
+    /* AJUSTADO PARA 25% CONFORME SOLICITAÇÃO */
+    object-position: center 25%; 
   }
 
   /* 6. FAQ SEMPRE ABERTO NO MOBILE */
