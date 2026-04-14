@@ -15,22 +15,11 @@
   gtag('config', 'G-8X27C1YMJF');
 </script>
 
-<!-- FIX 1: CSS externo não-bloqueante via preload -->
-<!-- Era <link rel="stylesheet"> síncrono → browser parava render até baixar style.css inteiro -->
-<link rel="preload" href="style.css?v=5" as="style" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="style.css?v=5"></noscript>
+<link rel="stylesheet" href="style.css?v=6">
 
-<!-- FIX 2: Fontes não-bloqueantes — era 3 famílias carregando de forma síncrona -->
-<!-- preconnect em AMBOS os domínios (gstatic faltava crossorigin) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap"
-      as="style"
-      onload="this.rel='stylesheet'">
-<noscript>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap">
-</noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap">
 
 </head>
 <body>
