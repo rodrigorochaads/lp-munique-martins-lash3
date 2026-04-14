@@ -6,7 +6,7 @@
   --beige-dark:   #DDD0BE;
   --beige-mid:    #EDE3D5;
   --black:        #1a1a1a;
-  --gray:         #6B5E52;
+  --gray:         #574b41;
   --white:        #ffffff;
   --shadow-choco: 0 10px 40px rgba(92,51,23,0.15);
   --shadow-soft:  0 8px 30px rgba(0,0,0,0.07);
@@ -61,7 +61,7 @@ section { padding: 5rem 0; }
   padding: 1rem 2.2rem;
   border-radius: 50px;
   font-size: 1rem;
-  transition: all 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 8px 28px rgba(92,51,23,0.35);
   cursor: pointer;
   border: none;
@@ -77,7 +77,7 @@ section { padding: 5rem 0; }
   padding: 1rem 2rem;
   border-radius: 50px;
   font-size: 0.95rem;
-  transition: all 0.3s;
+  transition: transform 0.3s ease, background 0.3s ease;
   box-shadow: 0 8px 25px rgba(0,0,0,0.18);
 }
 .btn-white:hover { transform: translateY(-3px); background: var(--beige); }
@@ -118,7 +118,7 @@ section { padding: 5rem 0; }
   background: var(--white); border-radius: var(--radius);
   padding: 2rem 1.5rem; text-align: center;
   box-shadow: var(--shadow-soft);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease;
   border-top: 4px solid var(--choco);
 }
 .card-pq:hover { transform: translateY(-6px); box-shadow: var(--shadow-choco); }
@@ -130,7 +130,7 @@ section { padding: 5rem 0; }
 .modulo-card {
   background: var(--white); border-radius: var(--radius-sm);
   padding: 1.5rem; text-align: center;
-  box-shadow: var(--shadow-soft); transition: all 0.3s;
+  box-shadow: var(--shadow-soft); transition: transform 0.3s ease;
   display: flex; flex-direction: column; align-items: center; gap: 0.8rem;
 }
 .modulo-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-choco); }
@@ -150,7 +150,7 @@ section { padding: 5rem 0; }
   background: var(--white); border-radius: var(--radius);
   padding: 2rem 1.5rem; text-align: center;
   box-shadow: var(--shadow-soft);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease;
 }
 .dif-item:hover { transform: translateY(-6px); box-shadow: var(--shadow-choco); }
 .dif-item > span { font-size: 2.5rem; display: block; margin-bottom: 1rem; }
@@ -216,10 +216,10 @@ section { padding: 5rem 0; }
   align-items: center; justify-content: center;
   text-align: center; gap: 1rem;
 }
-.preco-label { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
+.preco-label { color: rgba(255,255,255,0.95); font-size: 0.9rem; }
 .preco-num { font-family: 'Montserrat', sans-serif; font-size: 2.8rem; font-weight: 900; color: white; line-height: 1; }
-.preco-parcel { color: rgba(255,255,255,0.8); font-size: 0.85rem; }
-.urgencia-note { font-size: 0.82rem; color: rgba(255,255,255,0.82); font-style: italic; padding: 0 0.5rem; }
+.preco-parcel { color: rgba(255,255,255,0.95); font-size: 0.85rem; }
+.urgencia-note { font-size: 0.82rem; color: rgba(255,255,255,0.95); font-style: italic; padding: 0 0.5rem; }
 
 /* GARANTIA */
 .garantia-inner {
