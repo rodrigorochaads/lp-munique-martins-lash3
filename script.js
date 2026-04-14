@@ -14,17 +14,24 @@ document.querySelectorAll('.faq-btn').forEach(btn => {
 
 // Scroll Animations (Intersection Observer)
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
+      const delay = parseInt(entry.target.dataset.delay) || 0;
       setTimeout(() => {
         entry.target.classList.add('visible');
-      }, 80 * (entry.target.dataset.delay || 0));
+        observer.unobserve(entry.target);
+      }, 80 * delay);
     }
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.animate').forEach((el, i) => {
+// Atribuição de delay feita em lote fora do loop do observer (evita reflow forçado)
+const animEls = document.querySelectorAll('.animate');
+animEls.forEach((el, i) => {
   el.dataset.delay = i % 4;
+});
+// Observação separada para não misturar leitura e escrita de layout
+animEls.forEach((el) => {
   observer.observe(el);
 });
 
