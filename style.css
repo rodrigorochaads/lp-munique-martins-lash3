@@ -83,6 +83,11 @@ section { padding: 5rem 0; }
 .btn-white:hover { transform: translateY(-3px); background: var(--beige); }
 
 /* FLOATING WHATSAPP */
+@keyframes wa-enter {
+  from { opacity: 0; transform: scale(0.6) translateY(10px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
 .float-wa {
   position: fixed; bottom: 24px; right: 24px;
   width: 58px; height: 58px;
@@ -91,6 +96,8 @@ section { padding: 5rem 0; }
   color: white; z-index: 1000;
   box-shadow: 0 6px 22px rgba(37,211,102,0.45);
   transition: transform 0.3s;
+  opacity: 0;
+  animation: wa-enter 0.4s ease 1.2s forwards;
 }
 .float-wa:hover { transform: scale(1.12); }
 .float-wa svg { width: 30px; height: 30px; fill: white; }
